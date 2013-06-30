@@ -60,4 +60,22 @@ public class Locacao {
 		return true;
 	}
 
+	public boolean finalizarLocacao() {
+
+		Locacao locacaoParaSerFinalizada = null;
+		for (Locacao locacao: locacoes) {
+			if (this.equals(locacao)) {
+				locacaoParaSerFinalizada = locacao;
+				break;
+			}
+		}
+		
+		if (locacaoParaSerFinalizada != null) {
+			locacoes.remove(locacaoParaSerFinalizada);
+			return true;
+		}
+		
+		return false;
+	}
+
 }

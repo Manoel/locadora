@@ -37,5 +37,21 @@ public class LocacaoTest {
 
 		assertFalse(locacaoRealizada);
 	}
+	
+	@Test
+	public void testDevolucaoDeVeiculoComSucesso() {
+		Cliente cliente = new Cliente();
+		Veiculo veiculo = new Veiculo();
+		Periodo periodo = new Periodo(new Date(), new Date());
+		Locacao locacao = new Locacao(cliente, veiculo, periodo);
+		
+		boolean locacaoRealizada = locacao.realizarLocacao();
+
+		assertTrue(locacaoRealizada);
+
+		boolean locacaoFinalizada = locacao.finalizarLocacao();
+
+		assertTrue(locacaoFinalizada);
+	}
 
 }
