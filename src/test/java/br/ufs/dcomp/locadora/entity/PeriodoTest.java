@@ -42,7 +42,7 @@ public class PeriodoTest {
 	public void testCompararUmPeriodoComPeriodoAnteriorDeveRetornarUm() {
 		int comparacao = periodoBase.compareTo(periodoAnteriorAoBase);
 		
-		assertEquals(comparacao, 1);
+		assertEquals(comparacao, -1);
 	}
 	
 	@Test
