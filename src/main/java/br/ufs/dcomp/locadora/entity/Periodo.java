@@ -39,7 +39,7 @@ public class Periodo implements Comparable<Periodo> {
 			return 1;
 		}
 		
-		// períodos conflitantes
+		// periodos conflitantes
 		return 0;
 	}
 	
